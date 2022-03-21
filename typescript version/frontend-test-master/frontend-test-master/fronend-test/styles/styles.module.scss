@@ -1,0 +1,199 @@
+$primary-color: #2ba4b4;
+$secondary-color: #4e4e4e;
+$error-color: #e63946;
+$bg-color: #f1faee;
+$text-color: #293241;
+$color-white: #fff;
+
+$border-radius: 2px;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  border-radius: $border-radius;
+
+  .formHeader {
+    text-align: center;
+  }
+  .formCard {
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    border: 1px solid $secondary-color;
+    padding: 2rem;
+    border-radius: $border-radius;
+    box-shadow: 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 #0000;
+    background: white;
+  }
+
+  .subHeadings {
+    display: flex;
+    justify-content: space-between;
+
+    .step {
+      color: $secondary-color;
+      display: flex;
+      align-items: center;
+    }
+
+    .stepNo {
+      display: flex;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      background-color: $secondary-color;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-right: 5px;
+    }
+    .stepNoSuccess {
+      display: flex;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      background-color: $primary-color;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-right: 5px;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    color: $text-color;
+    margin-bottom: 1rem;
+  }
+
+  label,
+  input {
+    color: $text-color;
+  }
+
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    border-color: transparent transparent #888;
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+  }
+  input[type="text"]:focus {
+    border: 2px solid;
+    border-color: transparent transparent $primary-color;
+    outline: none !important;
+  }
+  .errorInput {
+    outline: none !important;
+    border-color: transparent transparent $error-color !important;
+  }
+
+  .formHeader {
+    margin: 10px 0px 10px 0px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .formRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+    .cDataName {
+      margin-left: 50px;
+    }
+    .cDataEmail {
+      margin-left: 92px;
+    }
+  }
+
+  .buttonSection {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  button:not(.back) {
+    color: $color-white;
+    background: $primary-color;
+    width: fit-content;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    margin: 20px 0 0 20px;
+
+    &:hover {
+      background: rgba($primary-color, 0.8);
+    }
+    &:disabled {
+      background: rgba($secondary-color, 0.8);
+    }
+  }
+
+  button.back {
+    color: $primary-color;
+    background: rgba($primary-color, 0.4);
+    width: fit-content;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    margin: 20px 0 0 20px;
+
+    &:hover {
+      background: rgba($primary-color, 1);
+      color: $color-white;
+    }
+  }
+
+  .error {
+    color: $error-color;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+
+  .disabled-btn {
+    cursor: not-allowed;
+    background: rgba($primary-color, 0.8);
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0.7rem;
+  }
+
+  .steps {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: $text-color;
+    font-size: 1.2rem;
+  }
+
+  .errorText {
+    color: $error-color;
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+    display: inline-block;
+  }
+
+  .hideForm {
+    display: none;
+  }
+
+  .showForm {
+    display: block;
+  }
+}
